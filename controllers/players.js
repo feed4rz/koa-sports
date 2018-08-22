@@ -1,9 +1,14 @@
+/* Dependencies */
 let router = require('koa-joi-router')
 const { Joi } = router
 router = router()
 
+/* Player model */
 const Player = require('../models/player')
 
+/*
+	GET Players
+*/
 router.route({
   method: 'get',
   path: '/',
@@ -60,6 +65,9 @@ router.route({
   }
 })
 
+/*
+	GET Player
+*/
 router.route({
   method: 'get',
   path: '/:id',
@@ -125,6 +133,9 @@ router.route({
   }
 })
 
+/*
+	POST Player
+*/
 router.route({
   method: 'post',
   path: '/',
@@ -132,7 +143,8 @@ router.route({
     failure: 400,
     continueOnError: true,
     body: {
-      name: Joi.string().min(3).required()
+      name: Joi.string().min(3).required(),
+      team_id: Joi.number().integer().min(1)
     },
     type: 'json',
     output: {
@@ -187,6 +199,9 @@ router.route({
   }
 })
 
+/*
+	PUT Player
+*/
 router.route({
   method: 'put',
   path: '/:id',
@@ -247,6 +262,9 @@ router.route({
   }
 })
 
+/*
+	DELETE Player
+*/
 router.route({
   method: 'delete',
   path: '/:id',
