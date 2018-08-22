@@ -10,6 +10,7 @@ router.prefix('/api')
 
 /* Controllers */
 router.use('/players', require('./players'))
+router.use('/teams', require('./teams'))
 router.use('/trainers', require('./trainers'))
 
 router.route({
