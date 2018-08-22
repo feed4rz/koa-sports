@@ -1,11 +1,14 @@
+/* Dependencies */
 let router = require('koa-joi-router')
 const { Joi } = router
 router = router()
 
 const up_since = new Date()
 
+/* Router name */
 router.prefix('/api')
 
+/* Controllers */
 router.use('/players', require('./players'))
 
 router.route({

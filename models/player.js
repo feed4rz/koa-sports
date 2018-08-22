@@ -1,3 +1,4 @@
+/* Dependencies */
 const type = require('sequelize')
 
 const Player = global.sq.define('player', {
