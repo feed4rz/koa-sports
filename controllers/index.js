@@ -6,6 +6,8 @@ const up_since = new Date()
 
 router.prefix('/api')
 
+router.use('/players', require('./players'))
+
 router.route({
   method: 'get',
   path: '/',
