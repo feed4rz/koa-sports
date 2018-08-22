@@ -8,14 +8,6 @@ global.sq = new sequelize({
   define: {
     charset: 'utf8',
     collate: 'utf8_general_ci'
-  },
-  operatorsAliases: {
-    $gt: sequelize.Op.gt,
-    $lt: sequelize.Op.lt,
-    $or: sequelize.Op.or,
-    $and: sequelize.Op.and,
-    $ne: sequelize.Op.ne,
-    $like: sequelize.Op.like
   }
 })
 
