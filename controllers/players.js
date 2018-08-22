@@ -240,7 +240,19 @@ router.route({
     }
   },
   handler: async ctx => {
-    if(ctx.invalid) return
+    if(ctx.invalid) {
+      ctx.status = 400
+
+      let message = null
+      for(let key in ctx.invalid) {
+        if(ctx.invalid[key].msg) {
+          message = ctx.invalid[key].msg
+          break
+        }
+      }
+
+      return ctx.body = { success: false, message }
+    }
 
     try {
       const { id } = ctx.request.params
