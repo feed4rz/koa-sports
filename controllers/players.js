@@ -20,13 +20,7 @@ router.route({
         body: {
           success: true,
           response: Joi.object().keys({
-            players: Joi.array().items(Joi.object().keys({
-              id: Joi.number().integer().min(1),
-              name: Joi.string(),
-              team_id: Joi.number().integer().min(1),
-              createdAt: Joi.date(),
-              updatedAt: Joi.date()
-            }))
+            players: Joi.array()
           })
         }
       },
@@ -82,13 +76,7 @@ router.route({
         body: {
           success: true,
           response: Joi.object().keys({
-            player: Joi.object().keys({
-              id: Joi.number().integer().min(1),
-              name: Joi.string(),
-              team_id: Joi.number().integer().min(1),
-              createdAt: Joi.date(),
-              updatedAt: Joi.date()
-            })
+            player: Joi.object()
           })
         }
       },
@@ -152,13 +140,7 @@ router.route({
         body: {
           success: true,
           response: Joi.object().keys({
-            player: Joi.object().keys({
-              id: Joi.number().integer().min(1),
-              name: Joi.string(),
-              team_id: Joi.number().integer().min(1),
-              createdAt: Joi.date(),
-              updatedAt: Joi.date()
-            })
+            player: Joi.object()
           })
         }
       },
@@ -186,9 +168,7 @@ router.route({
     }
 
     try {
-      let player = await Player.create(ctx.request.body)
-
-      player = player.dataValues
+      const player = await Player.create(ctx.request.body)
 
       ctx.body = { success: true, response: { player } }
     } catch(err) {
@@ -221,13 +201,7 @@ router.route({
         body: {
           success: true,
           response: Joi.object().keys({
-            player: Joi.object().keys({
-              id: Joi.number().integer().min(1),
-              name: Joi.string(),
-              team_id: Joi.number().integer().min(1),
-              createdAt: Joi.date(),
-              updatedAt: Joi.date()
-            })
+            player: Joi.object()
           })
         }
       },
