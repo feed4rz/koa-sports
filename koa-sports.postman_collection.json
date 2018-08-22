@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "bcec8d9c-6627-4aa3-a2c9-9d252fd3d1f9",
+		"name": "koa-sports",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Aleksey Ronaldo\",\n\t\"team_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{host}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Vladimir Messi\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/players/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"players",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/teams",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/teams/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Russia\",\n\t\"trainer_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{host}}/teams",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"USSR\",\n\t\"trainer_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{host}}/teams/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/teams/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "95d145f8-9a6f-4101-8f92-6ef4f5ccd09e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "bcd1ff1e-df59-412c-84cc-7d34f4d08fca",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Trainers",
+			"item": [
+				{
+					"name": "Trainers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/trainers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"trainers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trainer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/trainers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"trainers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trainer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"root\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/trainers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"trainers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trainer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"USSR\",\n\t\"trainer_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{host}}/trainers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"trainers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trainer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/trainers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"trainers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "95d145f8-9a6f-4101-8f92-6ef4f5ccd09e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "bcd1ff1e-df59-412c-84cc-7d34f4d08fca",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "042ce7e2-6d2a-4011-b457-37c6dd1357fa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5e7fca0d-a93a-4877-9748-7f931ac32b0d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9707d8f9-c121-4749-9c41-2bcdae3b2470",
+			"key": "host",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
